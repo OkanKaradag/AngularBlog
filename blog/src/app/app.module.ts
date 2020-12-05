@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { MainNavigationComponent } from './navigation/main-navigation/main-navigation.component';
+import { AdminNavigationComponent } from './navigation/admin-navigation/admin-navigation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MainNavigationComponent } from './navigation/main-navigation/main-navig
     ContactComponent,
     MainLayoutComponent,
     AdminLayoutComponent,
-    MainNavigationComponent
+    MainNavigationComponent,
+    AdminNavigationComponent
   ],
   imports: [
     BrowserModule,
