@@ -6,14 +6,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item" [ngClass]="{'active': activePage == ''}">
+          <a class="nav-link" routerLink="/">Home <span class="sr-only"></span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/about-me">About Me <span class="sr-only">(current)</span></a>
+        <li class="nav-item" [ngClass]="{'active': activePage == 'about-me'}">
+          <a class="nav-link" routerLink="/about-me">About Me <span class="sr-only"></span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/contact">Contact <span class="sr-only">(current)</span></a>
+        <li class="nav-item" [ngClass]="{'active': activePage == 'contact'}">
+          <a class="nav-link" routerLink="/contact">Contact <span class="sr-only"></span></a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
