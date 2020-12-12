@@ -13,7 +13,7 @@ enum Pages{
   styleUrls: ['./main-navigation.component.css']
 })
 export class MainNavigationComponent implements OnInit {
-  activePage!:Pages;
+  activePage:Pages;
 
   constructor(private router:Router)
   {
