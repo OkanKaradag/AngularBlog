@@ -1,0 +1,17 @@
+<div class="card border-primary">
+  <div class="card-header">Kategori</div>
+  <div class="card-body text-primary">
+    <div class="d-flex justify-content-center">
+      <!-- Spinner Start -->
+      <div *ngIf="categories.length==0" class="spinner-border text-primary" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+    <h3 *ngFor="let item of categories">
+      <strong>
+        <!-- category/technology/1 -->
+        <a [routerLink]="[ '/category', item.name, item.id ]" class="btn btn-link"><i class="fa fa-arrow-circle-right"></i> {{item.name}}</a>
+      </strong>
+    </h3>
+  </div>
