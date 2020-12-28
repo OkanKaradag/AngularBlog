@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\okan.karadag\\source\\repos\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj": {}
+    "F:\\LocalProjects\\AngularBlog\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\okan.karadag\\source\\repos\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj": {
+    "F:\\LocalProjects\\AngularBlog\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\okan.karadag\\source\\repos\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj",
+        "projectUniqueName": "F:\\LocalProjects\\AngularBlog\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj",
         "projectName": "AngularBlogCore.API",
-        "projectPath": "C:\\Users\\okan.karadag\\source\\repos\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj",
-        "packagesPath": "C:\\Users\\okan.karadag\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\okan.karadag\\source\\repos\\AngularBlogCore.API\\AngularBlogCore.API\\obj\\",
+        "projectPath": "F:\\LocalProjects\\AngularBlog\\AngularBlogCore.API\\AngularBlogCore.API\\AngularBlogCore.API.csproj",
+        "packagesPath": "C:\\Users\\Mehmet Hamza\\.nuget\\packages\\",
+        "outputPath": "F:\\LocalProjects\\AngularBlog\\AngularBlogCore.API\\AngularBlogCore.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\okan.karadag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mehmet Hamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
