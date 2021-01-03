@@ -7,9 +7,9 @@ import { HttpClientModule } from '@angular/common/http'
 
 // Components
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { MainNavigationComponent } from './navigation/main-navigation/main-navigation.component';
