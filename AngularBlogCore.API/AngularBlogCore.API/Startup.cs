@@ -45,6 +45,8 @@ namespace AngularBlogCore.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -55,8 +57,6 @@ namespace AngularBlogCore.API
             {
                 endpoints.MapControllers();
             });
-
-            app.UseCors();
 
             app.UseStaticFiles();
         }
