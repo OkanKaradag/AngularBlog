@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using AngularBlogCore.API.Models;
+using AngularBlogCore.API.Entities;
 
 namespace AngularBlogCore.API.Controllers
 {

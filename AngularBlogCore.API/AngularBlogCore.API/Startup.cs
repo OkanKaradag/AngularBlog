@@ -1,4 +1,4 @@
-using AngularBlogCore.API.Models;
+using AngularBlogCore.API.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

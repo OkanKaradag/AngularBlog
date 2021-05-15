@@ -1,10 +1,6 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
-namespace AngularBlogCore.API.Models
+namespace AngularBlogCore.API.Entities
 {
     public partial class UdemyAngularBlogDBContext : DbContext
     {

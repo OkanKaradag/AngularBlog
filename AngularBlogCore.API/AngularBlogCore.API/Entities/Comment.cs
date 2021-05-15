@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
-
-namespace AngularBlogCore.API.Models
+﻿namespace AngularBlogCore.API.Entities
 {
     public partial class Comment
     {
