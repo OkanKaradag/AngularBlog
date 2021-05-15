@@ -18,13 +18,14 @@ import { MainNavigationComponent } from '../navigation/main-navigation/main-navi
     MainNavigationComponent,
     HomeComponent,
     AboutMeComponent,
-    ContactComponent],
+    ContactComponent,
+  ],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}

@@ -6,10 +6,7 @@ import { PageTitleComponent } from './page-title/page-title.component';
 
 @NgModule({
   declarations: [MenuCategoryComponent, PageTitleComponent],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [MenuCategoryComponent,PageTitleComponent]
+  imports: [CommonModule, RouterModule],
+  exports: [MenuCategoryComponent, PageTitleComponent],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

@@ -8,9 +8,8 @@ describe('AdminNavigationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminNavigationComponent ]
-    })
-    .compileComponents();
+      declarations: [AdminNavigationComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

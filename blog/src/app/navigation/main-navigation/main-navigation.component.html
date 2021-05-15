@@ -1,24 +1,45 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [ngClass]="{'active': activePage == ''}">
-          <a class="nav-link" routerLink="/">Home <span class="sr-only"></span></a>
+        <li class="nav-item" [ngClass]="{ active: activePage == '' }">
+          <a class="nav-link" routerLink="/"
+            >Home <span class="sr-only"></span
+          ></a>
         </li>
-        <li class="nav-item" [ngClass]="{'active': activePage == 'about-me'}">
-          <a class="nav-link" routerLink="/about-me">About Me <span class="sr-only"></span></a>
+        <li class="nav-item" [ngClass]="{ active: activePage == 'about-me' }">
+          <a class="nav-link" routerLink="/about-me"
+            >About Me <span class="sr-only"></span
+          ></a>
         </li>
-        <li class="nav-item" [ngClass]="{'active': activePage == 'contact'}">
-          <a class="nav-link" routerLink="/contact">Contact <span class="sr-only"></span></a>
+        <li class="nav-item" [ngClass]="{ active: activePage == 'contact' }">
+          <a class="nav-link" routerLink="/contact"
+            >Contact <span class="sr-only"></span
+          ></a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+          Search
+        </button>
       </form>
     </div>
   </div>

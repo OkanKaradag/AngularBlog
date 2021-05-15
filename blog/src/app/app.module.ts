@@ -12,19 +12,15 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AdminNavigationComponent } from './navigation/admin-navigation/admin-navigation.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AdminLayoutComponent,
-    AdminNavigationComponent,
-  ],
+  declarations: [AppComponent, AdminLayoutComponent, AdminNavigationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    PagesModule
+    PagesModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
