@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AngularBlogCore.API.Entities;
+using AngularBlogCore.API.Models.ResponseModels;
 
 namespace AngularBlogCore.API.Controllers
 {
@@ -24,6 +25,38 @@ namespace AngularBlogCore.API.Controllers
         public async Task<ActionResult<IEnumerable<Article>>> GetArticles()
         {
             return await _context.Articles.ToListAsync();
+        }
+
+        // GET: api/Articles
+        [HttpGet("{page}/{pageSize}")]
+        public IActionResult GetArticles(int page=1, int pageSize=5)
+        {
+            IQueryable<Article> query = _context.Articles.Include(x => x.Category).Include(y => y.Comments).OrderByDescending(z => z.PublishDate);
+
+            var articleResponse = query.Skip((pageSize * (page - 1))).Take(pageSize).ToList().Select(x => new ArticleResponse()
+            { 
+                Id = x.Id,
+                Title = x.Title,
+                ContentMain = x.ContentMain,
+                ContentSummary = x.ContentSummary,
+                CommentCount = x.Comments.Count,
+                ViewCount = x.ViewCount,
+                Picture = x.Picture,
+                PublishDate = x.PublishDate,
+                Category = new CategoryResponse()
+                {
+                    Id = x.Category.Id,
+                    Name = x.Category.Name
+                }
+            });
+
+            var paginationResult = new PaginationResponse<ArticleResponse>
+            {
+                TotalCount = query.Count(),
+                Response = articleResponse
+            };
+
+            return Ok(paginationResult);
         }
 
         // GET: api/Articles/5
