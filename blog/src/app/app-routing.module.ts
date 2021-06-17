@@ -19,6 +19,11 @@ const routes: Routes = [
         path: '',
         component: HomeComponent,
       },
+      //Pagination for home component
+      {
+        path: 'page/:page',   //:page is data
+        component: HomeComponent,
+      },
       //www.blabla.com/about-me
       {
         path: 'about-me',
