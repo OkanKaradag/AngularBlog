@@ -1,0 +1,81 @@
+<div *ngIf="articles.length > 0; else emptyArticleTemplate">
+  <div *ngFor="let article of articles
+      | paginate
+          : {
+              itemsPerPage: pageSize,
+              currentPage: page,
+              totalItems: totalCount
+            }">
+    <ng-container
+    *ngTemplateOutlet=
+    "
+      horizontalArticleTemplate;
+      context:
+      {
+        id:article.id,
+        title:article.title,
+        category:article.category.name,
+        picture:article.picture,
+        contentSummary:article.contentSummary,
+        publishDate:article.publishDate,
+        viewCount:article.viewCount,
+        commentCount:article.commentCount
+      }
+    ">
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #emptyArticleTemplate>
+  <div class="alert alert-danger" role="alert">Article Not Found!</div>
+</ng-template>
+
+<ng-template
+  let-articleId="id"
+  let-articleTitle="title"
+  let-articleCategory="category"
+  let-articlePictureUrl="picture"
+  let-articleContentSummary="contentSummary"
+  let-articlePublishDate="publishDate"
+  let-articleViewCount="viewCount"
+  let-articleCommentCount="commentCount"
+  #horizontalArticleTemplate
+>
+  <div class="card bg-light border-primary mb-3">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img [src]="articlePictureUrl || defaultArticleImageUrl" class="card-img" />
+        </div>
+        <div class="col-md-8">
+          <h5 class="card-title">{{ articleTitle }}</h5>
+          <p class="card-text">{{ articleContentSummary }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer bg-transparent border-primary">
+      <span class="badge badge-pill badge-dark">
+        <i class="fa fa-calender"></i>{{ articlePublishDate | date: "dd.mm.yyyy" }}
+      </span>
+      <span class="mr-1"></span>
+      <span class="badge badge-pill badge-success">
+        <i class="fa fa-folder"></i>{{ articleCategory }}
+      </span>
+      <span class="mr-1"></span>
+      <span class="badge badge-pill badge-primary">
+        <i class="fa fa-eye"></i>{{ articleViewCount }}
+      </span>
+      <span class="mr-1"></span>
+      <span class="badge badge-pill badge-danger">
+        <i class="fa fa-comment"></i>{{ articleCommentCount }}
+      </span>
+        <a
+          [routerLink]="['/article', articleId]"
+          class="btn btn-primary btn-sm float-right"
+          >read more...
+        </a>
+    </div>
+  </div>
+</ng-template>
+
+<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
