@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private articleService: ArticleService,
-    private activatedRout: ActivatedRoute
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    this.activatedRout.paramMap.subscribe((params) => {
+    this.activatedRoute.paramMap.subscribe((params) => {
       var page = params.get('page');
 
       if (page) this.page = Number(page);
