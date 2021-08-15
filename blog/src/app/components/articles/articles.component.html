@@ -1,3 +1,25 @@
+<!-- Placeholder Content -->
+<div *ngIf="articleService.loading">
+  <main *ngFor="let item of createRange()" class="page mb-2">
+    <div class="page-content">
+      <div class="placeholder-content">
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+        <div class="placeholder-content_item"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<!-- Placeholder Content End-->
+
 <div *ngIf="articles.length > 0; else emptyArticleTemplate">
   <div *ngFor="let article of articles
       | paginate
@@ -27,7 +49,7 @@
 </div>
 
 <ng-template #emptyArticleTemplate>
-  <div class="alert alert-danger" role="alert">Article Not Found!</div>
+  <div *ngIf="!articleService.loading" class="alert alert-danger" role="alert">Article Not Found!</div>
 </ng-template>
 
 <ng-template
@@ -78,4 +100,9 @@
   </div>
 </ng-template>
 
-<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+<pagination-controls
+  *ngIf="totalCount > pageSize"
+  (pageChange)="pageChanged($event)"
+  previousLabel="previous"
+  nextLabel="next"
+></pagination-controls>
