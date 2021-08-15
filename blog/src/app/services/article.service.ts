@@ -11,7 +11,7 @@ import { Article } from '../models/article';
 export class ArticleService {
   constructor(private httpClient: HttpClient) {}
 
-  loading: boolean = true;
+  public loading: boolean = true;
   apiUrl = `${environment.baseApiUrl}/articles`;
 
   getArticles(page: number, pageSize: number) {
