@@ -11,6 +11,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainLayoutComponent } from '../layouts/main-layout/main-layout.component';
 import { MainNavigationComponent } from '../navigation/main-navigation/main-navigation.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MainNavigationComponent } from '../navigation/main-navigation/main-navi
     HomeComponent,
     AboutMeComponent,
     ContactComponent,
+    ArticleComponent,
   ],
   imports: [
     CommonModule,
