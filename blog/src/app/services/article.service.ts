@@ -22,4 +22,13 @@ export class ArticleService {
       })
     );
   }
+
+  getArticle(id:number) {
+    let apiEndpoint = `${this.apiUrl}/${id}`;
+    return this.httpClient.get<PaginationResponse<Article>>(apiEndpoint).pipe(
+      tap((x) => {
+        this.loading = false;
+      })
+    );
+  }
 }
