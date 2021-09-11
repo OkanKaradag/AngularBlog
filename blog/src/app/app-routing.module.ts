@@ -6,6 +6,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ArticleComponent } from './pages/article/article.component';
 
 const routes: Routes = [
   //www.blabla.com/
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'page/:page',   //:page is data
         component: HomeComponent,
+      },
+      {
+        path: 'article/:id',
+        component: ArticleComponent,
       },
       //www.blabla.com/about-me
       {
